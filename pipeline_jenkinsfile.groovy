@@ -22,11 +22,10 @@
      description('Ambiente Desarrollo')
  }
 
-pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
-    definition {
-        cps {
-            script(readFileFromWorkspace('test'))
-            sandbox()
+ multibranchPipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
+    factory {
+        workflowBranchProjectFactory {
+            scriptPath('Jenkinsfile')
         }
     }
 }
