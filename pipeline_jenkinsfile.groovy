@@ -8,6 +8,9 @@
 
  folder(proyect_client) {
      description('Cliente ' + proyect_client)
+       authorization {
+        blocksInheritance()
+    }
  }
 
  folder(proyect_client + '/' + project_name) {
