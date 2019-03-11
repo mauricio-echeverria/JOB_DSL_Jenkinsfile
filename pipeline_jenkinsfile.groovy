@@ -25,7 +25,7 @@ pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + pro
         cpsScm {
             scm {
                 git(url_git)
-                branches(branch_scm)
+                branch(branch_scm)
                 //credentials(credentials_scm)
             }
 
