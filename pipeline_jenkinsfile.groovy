@@ -11,16 +11,9 @@
  }
 
  folder(proyect_client + '/' + project_name) {
-     description('Ambientes ' + project_name)
  }
 
- //-----------------------------------------Desarrollo--------------------------------------------
-
- folder(proyect_client + '/' + project_name + '/' + 'Desarrollo') {
-     description('Ambiente Desarrollo')
- }
-
-pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_Pipeline') {
+pipelineJob(proyect_client + '/' + project_name + '/'  + project_name + '_Pipeline') {
     definition {
         cpsScm {
         scm{  
