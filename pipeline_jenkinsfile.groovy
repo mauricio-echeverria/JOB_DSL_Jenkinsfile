@@ -28,7 +28,7 @@ pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + pro
                 git(url_git)
             }
 
-            lightweight(boolean lightweight = true)
+            lightweight(true)
         }
     }
 }
