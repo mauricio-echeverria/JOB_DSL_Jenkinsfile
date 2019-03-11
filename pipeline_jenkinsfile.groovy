@@ -3,7 +3,7 @@
 
  // Variables locales (Propias de la clase)
  def url_git = "${URL_SCM}"
- def branch_scm = "${BRANCH_SCM}"
+ String branch_scm = "${BRANCH_SCM}"
  def credentials_scm = "calidad.jenkins"
 
  folder(proyect_client) {
@@ -25,7 +25,7 @@ pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + pro
         cpsScm {
             scm {
                 git(url_git)
-                branches("*/master")
+                branches(branch_scm)
                 //credentials(credentials_scm)
             }
 
