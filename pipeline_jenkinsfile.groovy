@@ -1,6 +1,5 @@
  def proyect_client = "${PROJECT_CLIENT}"
  def project_name = "${PROJECT_NAME}"
- def project_description = "${PROJECT_DESCRIPTION}"
 
  // Variables locales (Propias de la clase)
  def url_git = "${URL_SCM}"
