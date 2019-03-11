@@ -22,11 +22,13 @@
      description('Ambiente Desarrollo')
  }
 
-pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
+pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_Pipeline') {
     definition {
         cpsScm {
             scm {
-                git('https://github.com/jenkinsci/job-dsl-plugin.git')
+                git(url_git)
+                branch(branch_scm)
+                credentials(credentials_scm)
             }
         }
     }
