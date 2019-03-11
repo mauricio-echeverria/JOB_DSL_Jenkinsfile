@@ -25,6 +25,10 @@ pipelineJob(proyect_client + '/' + project_name + '/'  + project_name + '_Pipeli
                   }
                 }
             }
+         
+         triggers {
+        scm('*/15 * * * *')
+        }
 
             lightweight(true)
         }
