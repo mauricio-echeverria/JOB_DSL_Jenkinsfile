@@ -23,11 +23,14 @@
 pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_Pipeline') {
     definition {
         cpsScm {
-            scm {
-                git(url_git)
-                branch(branch_scm)
-                //credentials(credentials_scm)
-            }
+        scm{  
+            git{
+                remote{
+                    url(url_git)
+                    branch(branch_scm)
+                    credentials(credentials_scm)
+                  }
+                }
 
             lightweight(true)
         }
