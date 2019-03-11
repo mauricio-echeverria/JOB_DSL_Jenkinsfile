@@ -31,6 +31,7 @@ pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + pro
                     credentials(credentials_scm)
                   }
                 }
+            }
 
             lightweight(true)
         }
