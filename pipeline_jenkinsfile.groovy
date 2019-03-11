@@ -20,11 +20,13 @@
      description('Ambiente Desarrollo')
  }
 
-pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
+pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_Pipeline') {
     definition {
         cpsScm {
             scm {
                 git(url_git)
+                branches(url_git)
+                credentials(credentials_scm)
             }
 
             lightweight(true)
