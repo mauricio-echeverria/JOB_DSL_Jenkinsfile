@@ -25,7 +25,7 @@
 pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
     definition {
         cps {
-            script(readFileFromWorkspace('project-a-workflow.groovy'))
+            script(readFileFromWorkspace('test'))
             sandbox()
         }
     }
