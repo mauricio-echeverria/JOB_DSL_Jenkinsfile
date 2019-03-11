@@ -4,7 +4,7 @@
  // Variables locales (Propias de la clase)
  def url_git = "${URL_SCM}"
  def branch_scm = "${BRANCH_SCM}"
- def credentials_scm = "calidad.jenkins"
+ def credentials_scm = "${CREDENTIALS}"
 
  folder(proyect_client) {
      description('Cliente ' + proyect_client)
