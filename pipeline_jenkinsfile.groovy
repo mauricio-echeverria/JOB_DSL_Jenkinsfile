@@ -22,10 +22,12 @@
      description('Ambiente Desarrollo')
  }
 
- multibranchPipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
-    factory {
-        workflowBranchProjectFactory {
-            scriptPath('Jenkinsfile')
+pipelineJob(proyect_client + '/' + project_name + '/' + 'Desarrollo' + '/' + project_name + '_GIT') {
+    definition {
+        cpsScm {
+            scm {
+                git('https://github.com/jenkinsci/job-dsl-plugin.git')
+            }
         }
     }
 }
